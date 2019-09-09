@@ -2,7 +2,7 @@
 Lab 1: the power function
 cs105 Introduction to Computer Science
 Haverford College
-<replace with your name>
+<Kennedy Mutai>
 Compute base to the exp power, for integer exp>=0,
 using a straightforward translation of the rules
      base**0 = 1
@@ -59,12 +59,12 @@ def power_using_recursion(base, exp):
     if isinstance(exp, int) and not exp>=0:
         raise ValueError("Exponent should be positive integer or zero")
 
-    if exp == 0:
-        return 1
+    if exp == 1:
+        return base
+  
     else:
-        assert(exp > 0)
-        base_to_the_exp_minus_one = power_using_recursion(base, exp-1)
-        return base * base_to_the_exp_minus_one
+        assert(exp >= 0)
+        return (base * power_using_recursion(base, exp-1))
 
 
 def simple_power_ui():
