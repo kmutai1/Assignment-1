@@ -61,6 +61,8 @@ def power_using_iteration(base, exp):
     result=1
     if exp == 0:
         return result
+    elif exp<0
+        return result
     else:
         while exp:
             result= result*base
